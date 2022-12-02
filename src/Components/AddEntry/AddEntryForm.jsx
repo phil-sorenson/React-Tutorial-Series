@@ -1,5 +1,5 @@
-// ⭐ == Important Notations or Elabortating on WHY we used certain code
-// 📝== Defenitions or explanations for certain code
+// ⭐ == Important Notations or Elaborating on WHY we used certain code
+// 📝== Definitions or explanations for certain code
 // ❓== Question
 
 import React, { useState } from 'react';
@@ -35,7 +35,7 @@ const AddEntryForm = (props) => {
     }
     return ( 
         //⭐ When dealing with <FORM> we need to 'bind' the variables below to there respective <INPUTS> (Value attribute on the input tag)
-        //⭐ Whenever a tpye= submit <button> is clicked the 'onSubmit' attribute 👇 will be triggered 
+        //⭐ Whenever a type= submit <button> is clicked the 'onSubmit' attribute 👇 will be triggered 
                 //➡️ onSubmit Goal: Pass the submission of the <form> on to our handleSubmit() function above 
         <form onSubmit= {handleSubmit}>
             <label>Weight</label>

@@ -1,1 +1,8 @@
 State Variables = weight & date (only exist on our AddEntry form)--bound to inputs
+01-
+02-
+03
+04
+05
+06
+07- Creating the chart (graph chart) for our browser (React-Google-Charts.com)
