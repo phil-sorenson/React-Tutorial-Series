@@ -3,6 +3,7 @@ import DisplayEntries from './Components/DisplayEntries/DisplayEntries';
 //⭐ When importing ⬆️ './' allows you to look at anything that is currently inside the same folder as the file you're importing in to (e.g Allowing us to see all thing inside of src folder)
 //⭐ DisplayEntries is a 'CHILD' of the APP component because it's being instantiated inside of the APP component
 import AddEntryForm from './Components/AddEntry/AddEntryForm';
+import EntriesChartTracker from './Components/EntriesChartTracker/EntriesChartTracker';
 
 function App() {
   
@@ -36,7 +37,7 @@ function App() {
             {/* --> Set it to the 'Function Reference' (like a pointer or a name) */}
             {/* Whatever we name it here 👇 is how we need to reference it inside the child component(AddEntryForm.jsx) */}
       <AddEntryForm addNewEntryProperty= {addNewEntry} />
-
+      <EntriesChartTracker parentEntries={entries} />
     </div>
   );
 }

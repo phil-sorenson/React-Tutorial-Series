@@ -49,7 +49,7 @@ const AddEntryForm = (props) => {
                     {/* Must create a function to handle this and pass through (SEE ABOVE👆: function handleSubmit) */}
             {/*⭐ 'type = date' gives you a date picker w/ drop down calender on your web browser  */}
             {/*❓ Why is do we need the () inside the 'onChange{}' command? */}
-            {/*⭐ Everytime a letter is typed in to an input box from browser, a change event occurs ('onChange' command needed 👆) */}
+            {/*⭐ Every time a letter is typed in to an input box from browser, a change event occurs ('onChange' command needed 👆) */}
         </form>
      );
 }
