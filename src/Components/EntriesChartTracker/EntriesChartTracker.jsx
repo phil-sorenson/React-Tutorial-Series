@@ -38,5 +38,5 @@ export default EntriesChartTracker;
 // TODO: - Take the data from our entries[] (from App component) & plug it directly into the chart
         //⭐ Identify how to plug 'parentEntries' data into the chart (data)--because our data is not the same format as the installed chart, we must modify our data (map function)(useEffect Hook)
 // ToDO: Inside the useEffect: • Restructure our 'parentEntries' data into the chart → → → Create another state variable inside 'EntriesChartTracker'
-/* CONSOLE WATRNING: "Key" error (on console): Each child in a list should have a unique "key" prop (DisplayEntries)
+/* CONSOLE WARNING: "Key" error (on console): Each child in a list should have a unique "key" prop (DisplayEntries)
     SOLUTION: When generating HTML tags inside of a map, each HTML tag must be assigned a key attribute */

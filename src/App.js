@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import DisplayEntries from './Components/DisplayEntries/DisplayEntries';
 //⭐ When importing ⬆️ './' allows you to look at anything that is currently inside the same folder as the file you're importing in to (e.g Allowing us to see all thing inside of src folder)
-//⭐ DisplayEntries is a 'CHILD' of the APP component because it's being instantiated inside of the APP component
+//⭐ DisplayEntries is a 'CHILD' of the APP component (Parent) because it's being instantiated inside of the APP component
 import AddEntryForm from './Components/AddEntry/AddEntryForm';
 import EntriesChartTracker from './Components/EntriesChartTracker/EntriesChartTracker';
+import './App.css';
 
 function App() {
   
@@ -25,27 +26,46 @@ function App() {
   }
 
     
-    
+  
     
     
   //!⭐ After 'addNewEntry' function is formed, we must pass it down to 'AddEntryForm' component ---> Define some sort of property for AddEntryForms's prop object 
               //! (or Add an attribute to the props object for 'AddEntryForm' component) 
   return (
-    <div>
-      <DisplayEntries  parentEntries={entries}/>
-      {/* If () at the end of {addNewEntry} 👇 it would be a 'function call' & we would be SETTING IT EQUAL TO THE RESULT of the function  */}
-            {/* --> Set it to the 'Function Reference' (like a pointer or a name) */}
-            {/* Whatever we name it here 👇 is how we need to reference it inside the child component(AddEntryForm.jsx) */}
-      <AddEntryForm addNewEntryProperty= {addNewEntry} />
-      <EntriesChartTracker parentEntries={entries} />
-    </div>
+  //! Start splitting these components and tell them where on the page you want them → → 
+        //! utilize <> by giving it a 'className.' - container (gives you ability to move comps) fluid (makes screen span across whole screen) 
+      <div className='container-fluid'>
+        <div className='row'>
+          <h3 style={{'margin': '1em'}}>Weight 
+          <small className='text-muted'>Tracker</small></h3>
+          <div className='col-md-6'>
+            <div className='border-box'>
+              <DisplayEntries  parentEntries={entries}/>
+                {/* If () at the end of {addNewEntry} 👇 it would be a 'function call' & we would be SETTING IT EQUAL TO THE RESULT of the function as opposed to the array[] inside  */}
+                {/*❓ --> Set it to the 'Function Reference' (like a pointer or a name) */}
+                {/* Whatever we name it here 👇 is how we need to reference it inside the child component(AddEntryForm.jsx = child component) */}
+            </div>
+            <div className='border-box'>
+              <AddEntryForm addNewEntryProperty= {addNewEntry} />
+            </div>
+          </div>
+          <div className='column-md-6'>
+            <div className='border-box'>
+              <EntriesChartTracker parentEntries={entries} />
+            </div>
+          </div>
+        </div>
+      </div>
   );
 }
 
 export default App;
 
+// TODO: Tutorial #8: Style our Application - identify where you'd like your components to go on the page and use 'bootstraps'(CSS Libraries) that best fit need.
 //⭐ Passing data from one component down to another is done through PROPS (e.g. Passing 'entries' variable down to DisplayEntries from App.js)
 //❓Even when you're calling certain JS variables, a { } is needed? (E.g {entries})
 //❓ When do we use camel case and when do we use 'pascal casing'
 // ❓ When nevin switched from tempEntries= [entry,...entries] to tempEntries= [...entries, entry] explain why that made new entries go to the bottom instead of the top
 //➕ Work on syntax and where to add certain properties, variables and objects
+//⭐⭐ Pages are always broken down into 12 columns
+// ❓ Why did we have to break it up into so many <div></div> tags?

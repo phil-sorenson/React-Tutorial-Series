@@ -1,0 +1,10 @@
+.border-box {
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+    margin: 1em;
+    padding: 1em;
+}
+/* Padding: The amount of space around the content inside the container from the border
+ Border: Amount of space the other containers are away from one another
+ ❓ What is 'em' (in terms of space) */
